@@ -176,10 +176,10 @@ def make_ptr_data(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("--corpus", default="../data/corpus.txt", type=str, required=False, help="input corpus file")
-    parser.add_argument("--output", default="../data/ptr_input_data.txt", type=str, required=False, help="output file - corpus process to pretraining input data")
+    parser.add_argument("--corpus", default="data/corpus.txt", type=str, required=False, help="input corpus file")
+    parser.add_argument("--output", default="data/ptr_input_data.json", type=str, required=False, help="output file - corpus process to pretraining input data")
     parser.add_argument("--n_seq", default=512, type=int, required=False, help="number of max token")
-    parser.add_argument("--vocab", default="../data/vocab.model", type=str, required=False, help="spm vocab file")
+    parser.add_argument("--vocab", default="data/vocab.model", type=str, required=False, help="spm vocab file")
     parser.add_argument("--mask_prob", default="0.15", type=float, required=False, help="mask ratio - in the paper : 0.15")
     parser.add_argument("--dupe_factor", default=10, type=int, required=False, help="Number of different mask corpus data")
     args = parser.parse_args()
